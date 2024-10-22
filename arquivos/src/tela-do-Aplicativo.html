@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rede Social - Divulgue Seu Talento</title>
+    <link rel="stylesheet" href="../appStyle.css">
+</head>
+
+<body>
+    <header>
+        <button id="menuBtn">☰ Menu</button>
+        
+        <div class="area-de-pesquisa">
+            <input class="area-de-pesquisa"text" id="searchInput" placeholder="Pesquisar...">
+            <button id="searchBtn">🔍 Pesquisa</button>
+        </div>
+       
+    </header>
+
+    <div id="menuOverlay" class="overlay">
+        <div class="overlay-content">
+            <button id="profileBtn" class="btn-perfil">Perfil</button>
+            <div class="area-subir-postagem">
+                <p class="txt-abaixo-perfil">Vamos divulgar seu talento?</p>
+                <input type="text" class="input-field" id="name" placeholder="Nome">
+                <input type="text" class="input-field" id="serviceDesc" placeholder="Serviço">
+                <input type="file" class="input-field imagens" id="serviceImages" multiple>
+                <label for="serviceImages" class="custom-upload-btn">
+                    <span class="custom-upload-text">Upload Imagens <br></span>
+                </label>
+                
+                <div class="botaos-menu">
+                    <button class="btn publicar" id="publishBtn">Publicar</button>
+                    <button class="btn Voltar" onclick="closeOverlay('menuOverlay')">Voltar</button>
+                </div>
+             </div>
+           
+        </div>
+     </div>
+
+    <div id="profileOverlay" class="overlay">
+        <div class="overlay-content">
+            <h2 class="perfil-titulo">Seu Perfil</h2>
+            <p class="perfil-nome">Nome: <br>Maria Clara</p>
+            <p class="perfil-numero">Celular: (96) 8418-3387</p>
+            <button class="btn Voltar" onclick="closeOverlay('profileOverlay')">Voltar</button>
+        </div>
+    </div>
+
+    <div id="postOverlay" class="overlay">
+        <div class="overlay-content" id="postDetails">
+            <!-- Detalhes da postagem vão aqui -->
+        </div>
+    </div>
+
+    <div id="mainContent" class="pagina-principal">
+        <img class="logo" src="../img/logoTransparente.png" alt="">
+        <H2 class="nv-postagens">Novas postagens!</H2>
+        <div class="post"
+            onclick="openPost('Julia Souza', 'Sabonetes Artezanais', '(11) 98888-8888', ['../img/POSTAGEMS/sabonete1.jpeg', '../img/POSTAGEMS/sabonete2.webp'])" class="Post-aberto">
+            <h3>Julia Souza</h3>
+            <p>Oi! Eu sou a Júlia e faço sabonetes artesanais, todos veganos e com ingredientes naturais. Eu gosto de criar combinações de cheiros que acalmam e trazem bem-estar. E se você quer aprender, também ofereço workshops pra você criar seus próprios sabonetes em casa!</p>
+            <div class="carousel">
+                <img src="../img/POSTAGEMS/sabonete1.jpeg" alt="Artesanato">
+                <img src="../img/POSTAGEMS/sabonete2.webp" alt="Artesanato">
+            </div>
+        </div>
+
+        <div class="post"
+            onclick="openPost('Carlos Andrade', 'Marceneiro', '(21) 97777-7777', ['../img/POSTAGEMS/moveis1.webp', '../img/POSTAGEMS/moveis2.webp'])"class="Post-aberto">
+            <h3>Carlos Andrade</h3>
+            <p>Fala, pessoal! Sou o Carlos, marceneiro por paixão. Transformo pedaços de madeira em móveis únicos e personalizados, daqueles que dão um toque especial pra sua casa. Faço também restauração de móveis antigos, porque acredito que cada peça tem uma história pra contar. Se precisar de algo diferente, estou à disposição</p>
+            <div class="carousel">
+                <img src="../img/POSTAGEMS/moveis1.webp" alt="Design">
+                <img src="../img/POSTAGEMS/moveis2.webp" alt="Design">
+            </div>
+        </div>
+
+        <div class="post"
+        onclick="openPost('Ana Lima', 'Croche', '(21) 97777-7777', ['../img/POSTAGEMS/croche1.webp', '../img/POSTAGEMS/croche2.jpeg'])"class="Post-aberto">
+        <h3>Ana Lima</h3>
+        <p>Oi, eu sou a Ana e amo fazer crochê! Crio peças exclusivas, desde roupas a itens de decoração, tudo com muito carinho e atenção aos detalhes. Se você quiser algo especial, pode me mandar uma ideia que eu faço sob encomenda. Ah, e também ensino crochê para quem quer aprender essa arte relaxante!</p>
+        <div class="carousel">
+            <img src="../img/POSTAGEMS/croche1.webp" alt="Design">
+            <img src="../img/POSTAGEMS/croche2.jpeg" alt="Design">
+        </div>
+        </div>
+
+        <div class="post"
+        onclick="openPost('Felipe Oliveira', 'esculturas detalhadas', '(21) 97777-7777', ['../img/POSTAGEMS/macenaria.jpg', '../img/POSTAGEMS/macenaria2.webp'])"class="Post-aberto">
+        <h3>Felipe Oliveira</h3>
+        <p>"E aí, tudo bem? Sou o Felipe e meu negócio é transformar madeira em arte. Faço esculturas detalhadas, peças decorativas e até móveis pequenos. Adoro explorar formas e texturas. Se você curte um estilo mais rústico e único, dá uma olhada no meu trabalho!"</p>
+        <div class="carousel">
+            <img src="../img/POSTAGEMS/macenaria.jpg" alt="Design">
+            <img src="../img/POSTAGEMS/macenaria2.webp" alt="Design">
+            
+        </div>
+        </div>
+
+        <div class="post"
+        onclick="openPost('Lúcia Santos', 'Vasos e peças decorativas - Cerâmica', '(21) 97777-7777', ['../img/POSTAGEMS/ceramica1.png', '../img/POSTAGEMS/ceramica2.png'])"class="Post-aberto">
+        <h3>Lúcia Santos</h3>
+        <p>Sou a Lúcia, e minha paixão é cerâmica. Crio vasos e peças decorativas que pinto à mão, cada uma com um toque bem pessoal. Acho lindo quando as pessoas encontram uma peça que combina com elas. Além disso, estou pensando em criar uma linha de miniaturas para jardins</p>
+        <div class="carousel">
+            <img src="../img/POSTAGEMS/ceramica1.png" alt="Design">
+            <img src="../img/POSTAGEMS/ceramica2.png" alt="Design">
+        </div>
+        </div>
+
+        <div class="post"
+        onclick="openPost('Roberta Garcia', ' colchas, almofadas e bolsas', '(21) 97777-7777', ['../img/POSTAGEMS/pano1.jpeg', '../img/POSTAGEMS/pano2.webp'])"class="Post-aberto">
+        <h3>Roberta Garcia</h3>
+        <p>Oi, sou a Roberta e trabalho com patchwork e quilting. Adoro fazer colchas, almofadas e bolsas cheias de cores e padrões diferentes. Se você quiser algo que combine com sua casa, eu faço sob medida! Estou planejando lançar kits de DIY para quem quer começar nessa arte</p>
+        <div class="carousel">
+            <img src="../img/POSTAGEMS/pano1.jpeg" alt="Design">
+            <img src="../img/POSTAGEMS/pano2.webp" alt="Design">
+        </div>
+        </div>
+
+        <div class="post"
+        onclick="openPost('Lucas Ferreira', 'luminárias artesanais', '(21) 97777-7777', ['../img/POSTAGEMS/luminaria1.jpeg', '../img/POSTAGEMS/luminaria2.jpg'])"class="Post-aberto">
+        <h3>Lucas Ferreira</h3>
+        <p>Oi, sou o Lucas e faço luminárias artesanais. Uso materiais recicláveis, como garrafas e madeiras reaproveitadas, pra criar peças que deixam qualquer ambiente aconchegante. Estou pensando em lançar um workshop sobre como criar suas próprias luminárias em casa. Que tal?</p>
+        <div class="carousel">
+            <img src="../img/POSTAGEMS/luminaria1.jpeg" alt="Design">
+            <img src="../img/POSTAGEMS/luminaria2.jpg" alt="Design">
+        </div>
+        </div>
+
+        <div class="post"
+        onclick="openPost('Marina Costa', 'bijuterias artesanais', '(21) 97777-7777', ['../img/POSTAGEMS/bijuteria1.jpg', '../img/POSTAGEMS/bijuteria 2.jpg'])"class="Post-aberto">
+        <h3>Marina Costa</h3>
+        <p>Oi! Sou a Marina e faço bijuterias artesanais com um toque boho. Uso pedras naturais, sementes e tecidos pra criar acessórios leves e estilosos. Também aceito encomendas pra peças exclusivas. Estou considerando lançar uma assinatura mensal onde você recebe um acessório único todo mês</p>
+        <div class="carousel">
+            <img src="../img/POSTAGEMS/bijuteria1.jpg" alt="Design">
+            <img src="../img/POSTAGEMS/bijuteria 2.jpg" alt="Design">
+        </div>
+        </div>
+
+        <div class="post"
+        onclick="openPost('Renato Cardoso', 'miniaturas de cenários e veículos', '(21) 97777-7777', ['../img/POSTAGEMS/miniatura1.webp', '../img/POSTAGEMS/miniatura2.webp'])"class="Post-aberto">
+        <h3>Renato Cardoso</h3>
+        <p>E aí, pessoal! Sou o Renato e faço miniaturas de cenários e veículos. Gosto de trabalhar nos mínimos detalhes e recriar cenas icônicas. Aceito encomendas de projetos especiais, então se você quiser algo diferente pra decorar seu espaço, me chama!</p>
+        <div class="carousel">
+            <img src="../img/POSTAGEMS/miniatura1.webp" alt="Design">
+            <img src="../img/POSTAGEMS/miniatura2.webp" alt="Design">
+        </div>
+        </div>
+
+
+    </div>
+
+    <script src="../appScript.js"></script>
+</body>
+
+</html>

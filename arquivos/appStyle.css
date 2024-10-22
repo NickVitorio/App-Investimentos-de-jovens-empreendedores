@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    
+    font-family: "Noto Sans", sans-serif;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2B2B2B;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #0f0f0f;
+    color: white;
+}
+
+header input {
+    width: 50%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+.pagina-principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.area-de-pesquisa {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+
+    max-width: 50%;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.overlay-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80vw;
+    max-width: 500px;
+    box-shadow:  0px 10px 40px #00000056;
+}
+.perfil-titulo {
+    text-align: center;
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #ffffff;
+    background: #000000;
+    cursor: pointer;
+    transition: 0.5s;
+    }
+.perfil-nome{
+    font-weight: 800;
+
+}
+.perfil-numero{
+    font-weight: 800;
+
+}
+
+.botaos-menu{
+   padding: 10px 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.btn-copiar{
+    width: 40%;
+    padding: 16px 0px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+    transition: 0.5s;
+}
+.nome-pessoa{
+    text-transform: uppercase;
+   
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+}
+.servico-feito{
+    font-weight: 800;
+    font-size: 20px;
+}
+.numero-area{
+    
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+}
+.numero-de-contato{
+   
+    width: 50%;
+    font-weight: 800;
+   
+}
+
+.input-field {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff595e;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.post {
+    color: #ffffff;
+    background-color: #0f0f0f;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 88%;
+    transition: 0.3s;
+    max-width: 500px;
+}
+
+.post h3{
+    overflow-wrap: break-word;
+}
+.post p {
+    overflow-wrap: break-word;
+}
+.post:hover{
+    width: 90%;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    
+}
+
+.carousel img {
+    overflow: auto;
+    width: 50%;
+    height: 50%px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn-perfil{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #ffffff;
+    background: #000000;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow:  0px 10px 40px #00000056;
+}
+.txt-abaixo-perfil{
+    font-family: "Noto Sans", sans-serif;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    color: #000000de;
+    font-size: pt;
+    outline: none;
+    box-sizing: border-box;
+    transition: 0.5s;
+    text-align: center;
+    font-weight: 800;
+}
+
+.area-subir-postagem{
+    font-family: "Noto Sans", sans-serif;
+    border-radius: 5px;
+
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.area-subir-postagem>input{
+    font-family: "Noto Sans", sans-serif;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #ffffff;
+    color: #000000de;
+    font-size: 12pt;
+    box-shadow:  0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.area-de-pesquisa>input::placeholder{
+    color: #000000de;
+    margin-bottom: 10px;
+}
+.input-field::placeholder{
+    color: rgb(0, 0, 0,0.5);
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    
+}
+/* Ocultar o botão de upload original */
+.input-field.imagens {
+   display: none;
+}
+
+/* Estilo para o botão personalizado */
+.custom-upload-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00c3ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+/* Efeito de hover para o botão */
+
+
+/* Estilo para indicar múltiplos arquivos */
+.custom-upload-btn::after {
+    content: 'Selecionar Imagens';
+    text-align: center;
+}
+
+/* Estilo para o texto do botão */
+.custom-upload-text {
+    font-weight: bold;
+}
+
+.publicar{
+    background: #00ff88;
+    color: #000000;
+    letter-spacing: 3px;
+    font-weight: 800;
+
+    text-align: center;
+
+}
+.Voltar{
+    background: #514869;
+    letter-spacing: 3px;
+    
+    
+}
+
+.logo{
+    width: 50%;
+}
+.nv-postagens{
+    color: #ffffff;
+}

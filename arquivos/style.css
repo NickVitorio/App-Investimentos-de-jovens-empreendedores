@@ -1,0 +1,105 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Mono+One&display=swap');
+
+/* Reset geral */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+/* Estilo de links */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Estilo do corpo */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    background-color: black;
+    min-height: 100vh; /* Para manter centralizado verticalmente */
+    padding: 20px; /* Ajuste de espaço em dispositivos menores */
+}
+
+/* Container principal */
+.meio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    max-width: 600px; /* Limita a largura em dispositivos maiores */
+    margin: auto;
+}
+
+/* Logo responsiva */
+.logo {
+    max-width: 100%; /* Ajusta automaticamente conforme o container */
+    height: auto;
+}
+
+/* Estilo de texto */
+.frase {
+    color: white;
+    font-family: "Kanit", sans-serif;
+    font-weight: 200;
+    padding: 20px;
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Botão estilizado */
+.botao {
+    font-family: "Kanit", sans-serif;
+    text-transform: uppercase;
+    background-color: rgb(255, 255, 255);
+    width: 90%; /* Responsivo para caber em dispositivos menores */
+    max-width: 300px; /* Limita o tamanho máximo */
+    font-size: 18px;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 10px;
+    font-weight: bold;
+    transition: transform 0.5s ease;
+}
+
+/* Efeito de hover */
+.botao:hover {
+    transform: scale(1.1); /* Usa transform para suavidade */
+}
+
+/* Animação (corrigida para transformar) */
+@keyframes animacao-botao {
+    0% { transform: scale(1.1); }
+    100% { transform: scale(1.2); }
+}
+
+/* Media queries para diferentes dispositivos */
+@media (max-width: 768px) {
+    .botao {
+        font-size: 16px; /* Ajuste do texto em dispositivos menores */
+    }
+
+    .frase {
+        padding: 15px; /* Reduz o espaçamento para dispositivos menores */
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .botao {
+        width: 100%; /* Ocupa toda a largura do container */
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .frase {
+        font-size: 16px; /* Reduz o tamanho do texto em telas menores */
+    }
+}
